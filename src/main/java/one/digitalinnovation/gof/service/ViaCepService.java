@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "viacep", url ="https://viacep.com.br/ws")
 public interface ViaCepService {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{cep}/json")
+    @RequestMapping("/{cep}/json")
     Endereco consultarCep(@PathVariable("cep") String cep);
 }
